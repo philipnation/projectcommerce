@@ -2,7 +2,7 @@
 
 // base path
 
-$basePath = '/newroute';
+$basePath = '/venor';
 
 // Define your routes
 $routes = [
