@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(161, 156, 156, 0.692);
+    padding: 20px 0 0 0;
+}
+.container .sub-container{
+    background-color: white;
+}
+.container .sub-container .header{
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 0 5px 0;
+    border-bottom: 2px solid rgb(194, 194, 194);
+}
+.container .sub-container .header h1{
+    font-size: 22px;
+}
+.container .sub-container .header p{
+    opacity: 0.6;
+}
+.container .sub-container .content-container .content .content-sub{
+    border-bottom: 2px solid rgb(194, 194, 194);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px 15px 20px; 
+}
+.container .sub-container .content-container .content .content-sub .desc-cont{
+    display: flex;
+}
+.container .sub-container .content-container .content .content-sub .desc-img-container{
+    width: 100px;
+    height: 100px;
+}
+.container .sub-container .content-container .content .content-sub .desc-img-container img{ 
+    width: 100%;
+    height: 100%;
+}
+.container .sub-container .content-container .content .content-sub .desc{
+    margin-left: 20px;
+}
+.container .sub-container .content-container .content .content-sub .desc h3{
+    font-size: 20px;
+}
+.container .sub-container .content-container .content .content-sub .desc p{
+    margin: 0;
+    opacity: 0.7;
+    font-size: 15px;
+}
+.container .sub-container .content-container .content .content-sub .button-cont{
+    border-left: 3px solid rgba(192, 190, 190, 0.452);
+    padding-left: 10px;
+    margin-right: 20px;
+}
