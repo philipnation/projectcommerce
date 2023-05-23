@@ -52,6 +52,6 @@ body{
 }
 .container .sub-container .content-container .content .content-sub .button-cont{
     border-left: 3px solid rgba(192, 190, 190, 0.452);
-    padding-left: 10px;
+    padding-left: 15px;
     margin-right: 20px;
 }
