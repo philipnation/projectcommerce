@@ -23,7 +23,7 @@
                     <div class="content-sub">
                         <div class="desc-cont">
                             <div class="desc-img-container">
-                                <img src="images/pic.jpg">
+                                <img src="images/opt.svg">
                             </div>
 
                             <div class="desc">
@@ -41,7 +41,7 @@
                     <div class="content-sub">
                         <div class="desc-cont">
                             <div class="desc-img-container">
-                                <img src="images/pic.jpg">
+                                <img src="images/content.svg">
                             </div>
 
                             <div class="desc">
@@ -59,7 +59,7 @@
                     <div class="content-sub">
                         <div class="desc-cont">
                             <div class="desc-img-container">
-                                <img src="images/pic.jpg">
+                                <img src="images/seo.svg">
                             </div>
 
                             <div class="desc">
