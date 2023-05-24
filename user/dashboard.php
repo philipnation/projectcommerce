@@ -1,3 +1,6 @@
+<?php
+include('bars.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +38,7 @@
                             </div>
                         </div>
                         <div class="button-cont">
-                            <button class="btn btn-primary"><a href='#'>Order</a></button>
+                            <button class="btn btn-primary"><a href='add.php'>Add Products</a></button>
                         </div>
                     </div>
                     <div class="content-sub">
@@ -53,7 +56,7 @@
                             </div>
                         </div>
                         <div class="button-cont">
-                            <button class="btn btn-primary"><a href='#'>Order</a></button>
+                            <button class="btn btn-primary"><a href='#'>Publish</a></button>
                         </div>
                     </div>
                     <div class="content-sub">
@@ -63,15 +66,15 @@
                             </div>
 
                             <div class="desc">
-                                <h3>Taxes</h3>
+                                <h3>Order</h3>
                                 <div class="sub-desc">
-                                    <p>Lower Taxes</p>
+                                    <p>Meet your needs</p>
                                     <p>Configure your store wide taxes</p>
                                 </div>
                             </div>
                         </div>
                         <div class="button-cont">
-                            <button class="btn btn-primary"><a href='#'>Order</a></button>
+                            <button class="btn btn-primary"><a href='#'>Order products</a></button>
                         </div>
                     </div>
                 </div>

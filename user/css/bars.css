@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: rgb(250, 0, 0);
+    height: 80px;
+}
+.sidebar{
+    width: 80px;
+    background-color: black;
+    left: 0;
+    top: 80px;
+    bottom: 0;
+    position: fixed;
+}
