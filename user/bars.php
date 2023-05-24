@@ -15,7 +15,7 @@
     
   </div>
 
-  <div class="sidebar" onclick="expand()" id="expand">
+  <div class="sidebar">
 
   </div>
 </body>
