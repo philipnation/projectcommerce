@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="font-awesome/fonts/css/all.css">
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="button-cont">
-                            <button class="btn btn-primary">Order</button>
+                            <button class="btn btn-primary"><a href='#'>Order</a></button>
                         </div>
                     </div>
                     <div class="content-sub">
@@ -47,13 +47,13 @@
                             <div class="desc">
                                 <h3>Publish</h3>
                                 <div class="sub-desc">
-                                    <p>Register.set.publish</p>
+                                    <p>Register.Set.Publish</p>
                                     <p>Our easy-to-follow site will walk you through ever step from domain mapping to publishing</p>
                                 </div>
                             </div>
                         </div>
                         <div class="button-cont">
-                            <button class="btn btn-primary">Order</button>
+                            <button class="btn btn-primary"><a href='#'>Order</a></button>
                         </div>
                     </div>
                     <div class="content-sub">
@@ -66,12 +66,12 @@
                                 <h3>Taxes</h3>
                                 <div class="sub-desc">
                                     <p>Lower Taxes</p>
-                                    <p>Configure your storw wide taxes</p>
+                                    <p>Configure your store wide taxes</p>
                                 </div>
                             </div>
                         </div>
                         <div class="button-cont">
-                            <button class="btn btn-primary">Order</button>
+                            <button class="btn btn-primary"><a href='#'>Order</a></button>
                         </div>
                     </div>
                 </div>
