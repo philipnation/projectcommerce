@@ -8,7 +8,7 @@ body{
     padding: 150px 0 0 0;
 }
 .container .sub-container{
-    background-color: white;
+    background-color: rgb(129, 45, 45);
 }
 .container .sub-container .header{
     text-align: center;
