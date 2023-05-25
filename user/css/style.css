@@ -50,6 +50,8 @@ body{
 .nav .rt-container .notice button{
     margin: 10px;
     display: inline-block;
+    padding: 5px;
+    font-size: 11pt;
 }
 .nav .rt-container .notice{
     font-size: 10pt;
@@ -96,14 +98,15 @@ body{
     align-items: center;
     padding: 0 0 0 15px;
     width: 100%;
-    height: 62px;
+    height: 50px;
     border-left: 5px solid white;
     font-size: 15px;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
 }
 .sidebar .links a:hover,.sidebar .links a:focus{
-    border-left: 5px solid rgb(0,123,255);
+    border-left: 5px solid var(--primary-color);
+    color: var(--primary-color);
 }
 .sidebar .links i{
     margin-right: 10px;
@@ -164,8 +167,12 @@ body{
     padding-left: 15px;
     margin-right: 20px;
 }
+.body-btn{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
 button{
-    background-color: rgb(0,123,255);
+    background-color: var(--primary-color);
     border: none;
     padding: 6px 12px;
     border-radius: 4px;

@@ -29,7 +29,7 @@ include('header.php');
                                 </div>
                             </div>
                             <div class="button-cont">
-                                <button class="btn btn-primary"><a href='add.php'>Add Products</a></button>
+                                <button class="btn btn-primary body-btn"><a href='add.php'>Add Products</a></button>
                             </div>
                         </div>
                         <div class="content-sub">
@@ -47,7 +47,7 @@ include('header.php');
                                 </div>
                             </div>
                             <div class="button-cont">
-                                <button class="btn btn-primary"><a href='#'>view Report</a></button>
+                                <button class="btn btn-primary body-btn"><a href='#'>view Report</a></button>
                             </div>
                         </div>
                         <div class="content-sub">
@@ -65,7 +65,7 @@ include('header.php');
                                 </div>
                             </div>
                             <div class="button-cont">
-                                <button class="btn btn-primary"><a href='#'>View orders</a></button>
+                                <button class="btn btn-primary body-btn"><a href='#'>View orders</a></button>
                             </div>
                         </div>
                     </div>
