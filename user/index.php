@@ -1,5 +1,5 @@
 <?php
-include('bars.php');
+include('header.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,10 +8,10 @@ include('bars.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>venormall</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="font-awesome/fonts/css/all.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>

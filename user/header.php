@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="font/css/all.css">
   <link rel="stylesheet" href="css/bars.css">
-  <script src="bars.js" defer></script>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -17,12 +17,7 @@
     <div class="lt-container">
       <div class="prev">
         <a href="#">
-          <i class="fa fa-arrow-left"></i>
-        </a>
-      </div>
-      <div class="add">
-        <a href="#">
-          <i class="fa fa-cross"></i>
+          <i class="fa fa-bars" id="sideffect"></i>
         </a>
       </div>
     </div>
@@ -36,9 +31,6 @@
       </ul>
     </div>
   </div>
-
-
-
 
   <div class="sidebar">
     <div class="links">
