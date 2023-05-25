@@ -23,12 +23,12 @@
     </div>
     <div class="rt-container">
       <div class="notice">
-        <p>Your trial ends in ... days<br><span>Upgrade<span></p>
+        <p>Your trial ends in 14 days<button class="btn btn-primary"><a href="#">Upgrade</a></button><button class="btn btn-primary"><a href="#">view store</a></button></p>
       </div>
-      <ul>
+      <!--<ul>
         <li class="nav-links"><a href="#" class="store">View store</a></li>
         <li class="nav-links"><a href="#" class="publish">Publish</a></li>
-      </ul>
+      </ul>-->
     </div>
   </div>
 

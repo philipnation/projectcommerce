@@ -17,14 +17,14 @@
     height: 60px;
     width: fit-content;
 }
-.nav .lt-container .prev a,.nav .lt-container .add a{
+.nav .lt-container .prev a{
     padding: 10px 25px;
     text-decoration: none;
     color: #fff;
 }
 .nav .rt-container{
     display: flex;
-    gap: 40px;
+    gap: 10px;
 }
 .nav .rt-container .notice{
     color: gold;
@@ -33,20 +33,23 @@
     color: skyblue;
     font-weight: bold;
 }
+.nav .rt-container .notice button{
+    margin: 10px;
+    display: inline-block;
+}
 .nav .rt-container ul{
-    display: flex;
+    display: flexbox;
     list-style-type: none;
 }
-li{
+.nav .rt-container ul li{
     margin-right: 10px;
 }
-li a:hover{
+.nav .rt-container ul li a:hover{
     text-decoration: none;
     opacity: 0.8;
-    color: whitegit add user
-    ;
+    color: white;
 }
-li a{
+.nav .rt-container ul li a{
     display: inline-block;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -55,7 +58,7 @@ li a{
     transition: 0.15s all;
 }
 .sidebar{
-    width: 250px;
+    width: 200px;
     background-color: rgb(255, 255, 255);
     left: 0;
     top: 60px;
