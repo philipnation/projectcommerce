@@ -8,8 +8,12 @@ The home page will have the landing page where all about our services will be co
 
 ## user's dashboard features
 
-The user dashboard will be place where the clients will be able to manage their store. Example: add products, view orders, mark order as delivered, send mail when order is delivered, track growth, view analysis of the shop, set target, etc.
+The clients will be able to manage their store. Example: add products, view orders, mark order as delivered, send mail or sms when order is delivered, track growth, view analysis of the shop, set target, add coupons,etc.
 
 ## admin's dashboard features
 
 The admin will be in control of everything Example, suspend store, maintain basic settings of the website, send mail to any or all clients.
+
+## The ecommerce part
+
+Will be a fully grown website with all the ecommerce featured in it like coupon code, add to cart.

@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>venormall</title>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="font/css/all.css">
-  <link rel="stylesheet" href="css/bars.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
 
@@ -41,7 +41,7 @@
     </div>
     <div class="links">
       <a href="#">
-        <i class="fa fa-cart-plus"></i>
+        <i class="fa fa-cart"></i>
         Order
       </a>
     </div>
