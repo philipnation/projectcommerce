@@ -9,7 +9,7 @@ include('header.php');
         <div class="container">
             <div class="sub-container">
                 <div class="header">
-                    <h1>Welcome To Venor Mall</h1>
+                    <h1>Venor Mall</h1>
                     <p>manage your ecommerce store with ease</p>
                 </div>
                 <div class="content-container">
@@ -35,37 +35,37 @@ include('header.php');
                         <div class="content-sub">
                             <div class="desc-cont">
                                 <div class="desc-img-container">
-                                    <img src="images/content.svg">
+                                    <img src="images/seo.svg">
                                 </div>
 
                                 <div class="desc">
-                                    <h3>Publish</h3>
+                                    <h3>Report</h3>
                                     <div class="sub-desc">
-                                        <p>Register.Set.Publish</p>
+                                        <p>Set, track and view your store's target</p>
                                         <p>Our easy-to-follow site will walk you through ever step from domain mapping to publishing</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="button-cont">
-                                <button class="btn btn-primary"><a href='#'>Publish</a></button>
+                                <button class="btn btn-primary"><a href='#'>view Report</a></button>
                             </div>
                         </div>
                         <div class="content-sub">
                             <div class="desc-cont">
                                 <div class="desc-img-container">
-                                    <img src="images/seo.svg">
+                                    <img src="images/content.svg">
                                 </div>
 
                                 <div class="desc">
                                     <h3>Order</h3>
                                     <div class="sub-desc">
-                                        <p>Meet your needs</p>
+                                        <p>Approve your order with a simple click</p>
                                         <p>Configure your store wide taxes</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="button-cont">
-                                <button class="btn btn-primary"><a href='#'>Order products</a></button>
+                                <button class="btn btn-primary"><a href='#'>View orders</a></button>
                             </div>
                         </div>
                     </div>

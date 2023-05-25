@@ -3,13 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary-color: rgb(13, 14, 82);/*#0D0E52*/
+    --font-family: 'Inter', sans-serif; /*Open Sans*/
+}
+body{
+    font-family: var(--font-family);
+}
 .nav{
-    background-color: rgb(13, 14, 82);
+    background-color: var(--primary-color);
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    transition: background-color 0.2s ease;
 }
+.nav.scrolled {
+    background-color: #000000;
+}
+  
 .nav .lt-container{
     display: flex;
     justify-content: center;
@@ -36,6 +50,9 @@
 .nav .rt-container .notice button{
     margin: 10px;
     display: inline-block;
+}
+.nav .rt-container .notice{
+    font-size: 10pt;
 }
 .nav .rt-container ul{
     display: flexbox;
@@ -81,8 +98,9 @@
     width: 100%;
     height: 62px;
     border-left: 5px solid white;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
 }
 .sidebar .links a:hover,.sidebar .links a:focus{
     border-left: 5px solid rgb(0,123,255);

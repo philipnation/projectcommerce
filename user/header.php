@@ -6,9 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>venormall</title>
+  <link rel="icon" href="images/logo_white.png">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="font/css/all.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
   <script src="js/script.js" defer></script>
 </head>
 
@@ -41,7 +44,7 @@
     </div>
     <div class="links">
       <a href="#">
-        <i class="fa fa-cart"></i>
+        <i class="fa fa-shopping-cart"></i>
         Order
       </a>
     </div>
