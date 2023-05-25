@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(238, 235, 235, 0.616);
+}
+.body{
+    padding: 120px 0 0 0;
+
+}
+.container .sub-container{
+    background-color: rgb(255, 255, 255);
+}
+.container .sub-container .header{
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 0 5px 0;
+    border-bottom: 2px solid rgb(194, 194, 194);
+}
+.container .sub-container .header h1{
+    font-size: 22px;
+}
+.container .sub-container .header p{
+    opacity: 0.6;
+}
+.container .sub-container .content-container .content .content-sub{
+    border-bottom: 2px solid rgb(194, 194, 194);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px 15px 20px; 
+}
+.container .sub-container .content-container .content .content-sub .desc-cont{
+    display: flex;
+}
+.container .sub-container .content-container .content .content-sub .desc-img-container{
+    width: 50px;
+    height: 50px;
+}
+.container .sub-container .content-container .content .content-sub .desc-img-container img{ 
+    width: 100%;
+}
+.container .sub-container .content-container .content .content-sub .desc{
+    margin-left: 20px;
+}
+.container .sub-container .content-container .content .content-sub .desc h3{
+    font-size: 20px;
+}
+.container .sub-container .content-container .content .content-sub .desc p{
+    margin: 0;
+    opacity: 0.7;
+    font-size: 15px;
+}
+.container .sub-container .content-container .content .content-sub .button-cont{
+    border-left: 3px solid rgba(192, 190, 190, 0.452);
+    padding-left: 15px;
+    margin-right: 20px;
+}
+button{
+    background-color: rgb(0,123,255);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+button:hover{
+    background-color: rgb(109, 109, 109);
+    transition: all 0.15s;
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+button a:hover{
+    text-decoration: none;
+    color: white;
+}
