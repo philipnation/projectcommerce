@@ -1,6 +1,5 @@
 const sideffect = document.querySelector('#sideffect');
 const sidebareffect = document.querySelector('.sidebar');
-const body = document.querySelector('.body');
 
 function handleClick(event) {
   if(sidebareffect.style.display == "none"){
@@ -11,7 +10,6 @@ function handleClick(event) {
   }
 }
 sideffect.addEventListener('click', handleClick);
-body.addEventListener('click', handleClick);
 
 window.addEventListener('scroll', function() {
   var element = document.querySelector('.nav');
