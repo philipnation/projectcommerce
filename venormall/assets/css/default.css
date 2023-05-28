@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins Light";
+  src: url("../fonts/Poppins/Poppins-Light.ttf");
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --theme-main: #0d0e52;
+  --theme-one:  #0d6efd;
+  --theme-one-alt: #0b5ed7;
+  --theme-two: #326789;
+  --theme-two-light: #78a6c8;
+
+  --theme-light: #e9eef2;
+  --theme-light-alt: #0b5dd76c;
+  --theme-dark: rgb(40, 40, 40);
+
+  --theme-white: #fff;
+  --theme-black: #000;
+}
+/* Typography */
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 32px;
+}
+h4 {
+  font-size: 28px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 20px;
+}
+p {
+  font-family: poppins;
+}
+
+/* Buttons */
+.btn {
+  font-family: poppins;
+}
+.btn:focus {
+  outline: none !important;
+  border: none !important;
+}
+.bg-one {
+  background: var(--theme-one) !important;
+  color: var(--theme-light) !important;
+}
+.bg-one:hover {
+  background: var(--theme-one-alt) !important;
+  color: var(--theme-white) !important;
+}
+.bg-one:focus {
+  background: var(--theme-one-alt) !important;
+  color: var(--theme-white) !important;
+}
+.bg-one-shade {
+  background: var(--theme-one-alt);
+  color: var(--theme-white);
+}
+.bg-one-shade:hover {
+  background: var(--theme-one);
+  color: var(--theme-light);
+}
+.bg-one-shade:focus {
+  background: var(--theme-one-alt);
+  color: var(--theme-white);
+}
+.bg-two {
+  background: var(--theme-two);
+  color: var(--theme-light);
+}
+.bg-two:hover {
+  background: var(--theme-two-light);
+  color: var(--theme-white);
+}
+.bg-two:focus {
+  background: var(--theme-two) !important;
+  color: var(--theme-light) !important;
+}
+.bg-two-light {
+  background: var(--theme-two-light);
+  color: var(--theme-white);
+}
+.bg-two-light:hover {
+  background: var(--theme-two);
+  color: var(--theme-light);
+}
+.bg-outline-one {
+  background: transparent;
+  border: 1px solid var(--theme-one);
+  color: var(--theme-one);
+}
+.bg-outline-one:hover {
+  background: var(--theme-one-alt);
+  color: var(--theme-light);
+}
+.bg-outline-two {
+  background: transparent;
+  border: 1px solid var(--theme-two);
+  color: var(--theme-two);
+}
+.bg-outline-two:hover {
+  background: var(--theme-two-light);
+  color: var(--theme-white);
+}
+/* Make the button response */
+.btn-responsive {
+  font-size: calc(12px + .4vw) !important;
+}
+/* Spinner preloader */
+.spinner-border.preloader {
+  border: 6px solid var(--spinner-border-color) !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-right-color: #5a88cc66 !important;
+  --spinner-border-color: var(--theme-one);
+}
+.spinner-border.preloader-one {
+  --spinner-border-color: var(--theme-one);
+}
+.spinner-border.preloader-two {
+  --spinner-border-color: var(--theme-two);
+}
