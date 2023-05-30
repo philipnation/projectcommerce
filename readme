@@ -1,0 +1,52 @@
+## VENORMALL
+
+## Description
+
+This project is an e-commerce platform named Venormall that allows users to create their online stores and manage various aspects of their business. Users can register and access their personalized dashboard where they can perform actions such as adding products, viewing orders, marking orders as delivered or declined, and more.
+
+The platform provides users with a unique shop URL in the format of theirstore.venormall.com to showcase their products. Additionally, there are two plan options available: Basic and Advanced. The Advanced plan offers additional features such as setting at least 10 coupons, sending emails and SMS notifications for order statuses, creating custom domains, and limitless coupons.
+
+The project also includes an admin panel where administrators have full control over the entire system, allowing them to manage user details, monitor sales, and perform administrative tasks.
+
+
+## Features
+
+User Registration: Users can register and create their accounts.
+Personalized Dashboard: Users can access their dashboard to manage their online store.
+Shop URL: Each user is assigned a unique shop URL in the format of theirstore.venormall.com.
+Product Management: Users can add and manage their products.
+Order Management: Users can view orders, mark them as delivered or declined, and view order details.
+Advanced Plan: Users can upgrade to the Advanced plan for additional features.
+Coupon Management: Advanced users can set at least 10 coupons for their products.
+Notifications: Users receive email and SMS notifications for order statuses.
+Custom Domain: Advanced users can create a custom domain for their store.
+Admin Panel: Administrators have access to the admin panel to manage the entire system.
+
+
+## Technologies Used
+
+HTML
+CSS
+JavaScript
+PHP
+MySQL
+Bootstrap (optional)
+
+
+## Installation and Setup
+
+Clone the repository: git clone https://github.com/philipnation/projectcommerce.git
+Configure the database connection in the configuration file.
+Import the database schema and initial data.
+Set up a web server to run the project.
+
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+Fork the repository.
+Create a new branch: git checkout -b feature/your-feature
+Make your changes and commit them: git commit -m 'Add some feature'
+Push the branch: git push origin feature/your-feature
+Submit a pull request.
