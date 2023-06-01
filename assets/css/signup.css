@@ -1,0 +1,45 @@
+@import url("../css/default.css");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background: var(--bs-gray-200); */
+  background: var(--theme-light);
+}
+main {
+  width: 100%;
+  max-width: 992px;
+  min-height: 80vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  background: var(--theme-white);
+  border-radius: 1rem;
+}
+.form-container {
+  width: 50%;
+  border-radius: 1rem 0 0 1rem;
+}
+.illustration {
+  width: 50%;
+  background: var(--bs-gray-600);
+  border-radius: 0px 1rem 1rem 0;
+}
+@media screen and (max-width: 768px) {
+  body {
+    display: block;
+  }
+  main {
+    min-height: 100%;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .illustration {
+    display: none;
+  }
+}
