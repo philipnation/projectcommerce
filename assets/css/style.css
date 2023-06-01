@@ -63,10 +63,10 @@ section .title h2 {
 #header nav ul li a {
   transition: .04s border;
   padding-bottom: 4px;
-  color: var(--theme-black);
+  color: var(--bs-gray-400);
 }
 #header nav ul li a:hover {
-  color: var(--theme-black) ;
+  color: var(--bs-gray-300) ;
 }
 #header nav ul li a.active {
   border-bottom: 2px solid var(--bs-gray-100);
@@ -81,7 +81,7 @@ section .title h2 {
 @keyframes show-dropdown {
   0% {
     opacity: 0;
-    transform: translateY(-20%);
+    transform: translateY(20%);
   }
   50% {
     opacity: 1;
@@ -89,10 +89,14 @@ section .title h2 {
   }
 }
 #header nav ul li.dropdown ul {
-  background: var(--theme-light);
+  background: var(--theme-main);
 }
+/* #header nav ul li.dropdown:focus ul {
+  animation: show-dropdown 8s;
+} */
 #header nav ul li.dropdown ul li a:hover {
-  background: var(--theme-white);
+  background: var(--theme-light);
+  color: var(--theme-black);
 }
 @media screen and (max-width: 992px) {
   #header nav ul li a.active {
@@ -200,6 +204,7 @@ section .title h2 {
   height: 180px;
   border-left: 8px solid var(--theme-light-alt);
   display: flex;
+  flex-direction: column;
   align-items: stretch;
   transition: box-shadow .2s;
   padding-bottom: 16px;
@@ -207,21 +212,38 @@ section .title h2 {
 #features .content-box:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
 }
-#features i {
-  width: 64px;
-  font-size: 48px;
+#features .content-box i {
+  display: block;
+  font-size: 60px;
   color: var(--theme-one-alt);
+  text-align: center;
+  margin-bottom: 20px;
 }
 #features .content-box > div {
-  width: calc(100% - 64px);
+  text-align: center;
 }
-#features .content-box > div h6 {
-  font-weight: 600;
+#features .content-box > div h5 {
+  font-weight: 700;
 }
 #features .content-box > div p {
   color: var(--bs-gray-600);
   line-height: 1.6;
-  font-size: calc(12px + .2vw);
+  font-size: 1rem;
+}
+/* For tablets */
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  #features .content-box {
+    flex-direction: row;
+  }
+  #features .content-box i {
+    width: 64px;
+    margin-bottom: 0;
+  }
+  #features .content-box > div {
+    width: calc(100% - 64px);
+    text-align: initial;
+    padding: 0 16px;
+  }
 }
 /* Features - Others */
 #features .others > .row > div:first-child .content-container {
