@@ -105,3 +105,15 @@ new Swiper("#reviews .swiper", {
     }
   }
 })
+const iconContainers = document.querySelectorAll('.info');
+const infoBoxes = document.querySelectorAll('.info-text');
+
+iconContainers.forEach((iconContainer, index) => {
+  iconContainer.addEventListener('mouseover', () => {
+    infoBoxes[index].style.opacity = '1';
+  });
+  
+  iconContainer.addEventListener('mouseleave', () => {
+    infoBoxes[index].style.opacity = '0';
+  });
+});
