@@ -43,7 +43,7 @@ include('header.php');
                                 </div>
                             </div>
                             <div class="button-cont">
-                                <button class="btn btn-primary body-btn"><a href='add.php'>Add Products</a></button>
+                                <button class="btn btn-primary body-btn"><a href='add.php'>Add products</a></button>
                             </div>
                         </div>
                         <div class="content-sub">
@@ -61,7 +61,7 @@ include('header.php');
                                 </div>
                             </div>
                             <div class="button-cont">
-                                <button class="btn btn-primary body-btn"><a href='#'>view Report</a></button>
+                                <button class="btn btn-primary body-btn"><a href='#'>View report</a></button>
                             </div>
                         </div>
                         <div class="content-sub">
@@ -82,9 +82,29 @@ include('header.php');
                                 <button class="btn btn-primary body-btn"><a href='#'>View orders</a></button>
                             </div>
                         </div>
+                        <div class="content-sub">
+                            <div class="desc-cont">
+                                <div class="desc-img-container">
+                                    <img src="images/content.svg">
+                                </div>
+
+                                <div class="desc">
+                                    <h3>Buy with a click</h3>
+                                    <div class="sub-desc">
+                                        <p>Place your order today</p>
+                                        <p>Why <s>wait?</s></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-cont">
+                                <button class="btn btn-primary body-btn"><a href='#'>Place an order</a></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
+
 </html>

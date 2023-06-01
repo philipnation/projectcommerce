@@ -35,7 +35,6 @@ body{
     padding: 10px 25px;
     text-decoration: none;
     color: #fff;
-    font-size: 15pt;
 }
 .nav .rt-container{
     display: flex;
@@ -103,7 +102,7 @@ body{
     border-left: 5px solid white;
     font-size: 15px;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 .sidebar .links a:hover,.sidebar .links a:focus{
     border-left: 5px solid var(--primary-color);
@@ -128,28 +127,12 @@ body{
     font-size: 16px;
     padding: 15px 0 5px 0;
     border-bottom: 2px solid rgb(194, 194, 194);
-    font-family: 'Inter', sans-serif;
 }
 .container .sub-container .header h1{
     font-size: 22px;
 }
 .container .sub-container .header p{
     opacity: 0.6;
-}
-.sub-container .info-alert{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FDFBE3;
-    padding: 20px;
-    font-size: 11pt;
-}
-.sub-container .info-alert div{
-    margin: 10px;
-}
-.sub-container .info-alert div i{
-    color: red;
-    cursor: pointer;
 }
 .container .sub-container .content-container .content .content-sub{
     border-bottom: 2px solid rgb(194, 194, 194);
@@ -172,13 +155,12 @@ body{
     margin-left: 20px;
 }
 .container .sub-container .content-container .content .content-sub .desc h3{
-    font-size: 18px;
+    font-size: 20px;
 }
 .container .sub-container .content-container .content .content-sub .desc p{
     margin: 0;
     opacity: 0.7;
-    font-size: 14px;
-    font-family: 'Inter', sans-serif;
+    font-size: 15px;
 }
 .container .sub-container .content-container .content .content-sub .button-cont{
     border-left: 3px solid rgba(192, 190, 190, 0.452);
@@ -188,7 +170,6 @@ body{
 .body-btn{
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
-    font-size: 10pt;
 }
 button{
     background-color: var(--primary-color);
