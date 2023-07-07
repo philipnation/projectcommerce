@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', serif;
+}
+main{
+    background-color: #EBECF2;
+    width: 850px;
+    height: auto;
+    padding: 50px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .item-image, main .item-details{
+    width: 500px;
+    height: auto;
+    box-shadow: 1px 1px 20px grey;
+}
+main .item-image{
+    background-color: #F6F6F6;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+main .item-image .header, main .item-details .header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    font-size: 16pt;
+}
+main .item-image .p-name{
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+main .item-image .img-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .item-image .img-images div{
+    margin: 5px;
+    font-size: 30pt;
+}
+main .item-image img{
+    width: 250px;
+    height: 200px;
+    margin: auto;
+    display: block;
+}
+main .item-details{
+    font-family: 'Lato', serif;
+    background-color: #000;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #fff;
+    padding: 20px;
+}
+main .item-details .description{
+    padding-top: 30px;
+}
+main .item-details .btn-div{
+    text-align: center;
+}
+main .item-details .btn-next{
+    font-family: 'Montserrat', serif;
+    background-color: #EBECF2;
+    color: #000;
+    border: 1px solid transparent;
+    font-size: 12pt;
+    width: 80%;
+    padding: 8px;
+    margin-top: 50px;
+}
+.input .warning{
+    font-size: 9pt;
+}
+.input:nth-child(1){
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.input span{
+    display: inline-block;
+    margin: auto;
+    background-color: #000;
+    color: #EBECF2;
+    width: 35px;
+    height: 35px;
+    padding: 0px;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.input input{
+    width: 100%;
+}

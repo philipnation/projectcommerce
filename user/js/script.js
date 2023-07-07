@@ -1,15 +1,14 @@
 const sideffect = document.querySelector('#sideffect');
 const sidebareffect = document.querySelector('.sidebar');
 
-function handleClick(event) {
-  if(sidebareffect.style.display == "none"){
-    sidebareffect.style.display = "block"
-  }
-  else{
+sideffect.addEventListener('click', function(){
+  if(sidebareffect.style.display == "block"){
     sidebareffect.style.display = "none"
   }
-}
-sideffect.addEventListener('click', handleClick);
+  else{
+    sidebareffect.style.display = "block"
+  }
+});
 
 window.addEventListener('scroll', function() {
   var element = document.querySelector('.nav');
@@ -37,12 +36,69 @@ var loadFile = function(event) {
   var image = document.getElementById('output');
   image.src = URL.createObjectURL(event.target.files[0]);
 };
-function box() {
-  var mark = document.getElementById("mark");
-  var box = document.getElementById("box");
-  if (box.style.display == "inline-block") {
-    box.style.display = "none";
-  } else {
-    box.style.display = "inline-block";
+
+function search(array, value) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return i; // Return the index of the value if found
+    }
   }
-};
+  return -1; // Return -1 if the value is not found
+}
+
+function handleSearch() {
+  const categories = ['gaming', 'utility', '300', 40, 50];
+  const searchValue = document.getElementById('searchInput').value;
+
+  const result = search(categories, searchValue);
+  if (result !== -1) {
+    document.getElementById('result').innerHTML = `Value ${searchValue} found at index ${result}`;
+  } else {
+    document.getElementById('result').innerHTML = `Item ${searchValue} was not found`;
+  }
+}
+
+//changing/updating of image js//
+const profileImageInput = document.getElementById('profile-image');
+const previewImage = document.getElementById('preview-image');
+
+profileImageInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      previewImage.src = reader.result;
+      previewImage.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+
+//view java//
+function payment(){
+  var payBtn = document.getElementById('paymentBtn');
+  var shipping = document.getElementById('shipping-cont');
+  var payment = document.getElementById('payment-cont');
+  if(payment.style.display = 'flex'){
+    shipping.style.display = 'none';
+  }
+  else{
+    payment.style.display = 'none';
+  }
+}
+
+function shipping(){
+  var shipping = document.getElementById('shipping-cont');
+  var payment = document.getElementById('payment-cont');
+  if(shipping.style.display = 'flex'){
+    payment.style.display = 'none';
+  }
+  else{
+    shipping.style.display = 'none';
+  }
+}
+
+function decline(){
+  document.getElementById("decline-reason").style.display = 'block'
+}

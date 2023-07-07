@@ -1,0 +1,170 @@
+<body> 
+    
+    
+<!--------------------------------------
+NAVBAR
+--------------------------------------->
+<nav class="topnav navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0D0E52;">
+<div class="container-fluid">
+	<a class="navbar-brand d-sm-block d-md-none" href="./index.html"><strong>venormall</strong></a>
+	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="navbar-collapse collapse" id="navbarColor02">
+		<ul class="navbar-nav mr-auto d-flex align-items-center">
+			<li class="nav-item">
+				<a class="nav-link" href="./index.html">home</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+<!-- End Navbar -->
+    
+<!-- Main -->
+<div class="d-md-flex h-md-100 align-items-center">
+	<div class="col-md-6 p-0 bg-indigo h-md-100">
+		<div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center" style="background-color: #0D0E52;">
+			<div class="logoarea pt-5 pb-5">
+				<!--
+				<p>
+					<i class="fa fa-anchor fa-3x"></i>
+				</p>
+				-->
+				<h1 class="mb-0 mt-3 display-4">venormall</h1>
+				<h5 class="mb-4 font-weight-light">Get your store ready!</h5>
+				<a class="btn btn-outline-white btn-lg" href="register">back</a>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 p-0 bg-white h-md-100 loginarea">
+		<div class="d-md-flex align-items-center h-md-100 justify-content-center">
+            <!--was form-->
+			<div class="border rounded p-5">
+                <div class="alert alert-danger" role="alert" id="notificationbody" style="display: none;">
+                    <i class="fas fa-bullhorn"></i> <span id="notification"></span> <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+				<h3 class="mb-4 text-center">store details</h3>
+                <script src="assets/js/ajax.js"></script>
+                <script>
+                $(document).ready(function() {
+                  $('#loadContentButton').click(function() {
+                      var storename = $("#storename").val();
+                      var storeabout = $("#storeabout").val();
+                      var storedescription = $("#storedescription").val();
+                      $.post("handlers/addstoredetails.php", {
+                          storename: storename,
+                          storeabout: storeabout,
+                          storedescription: storedescription
+                      }, function(data, status){
+                          $("#login_reply").html(data);
+                          //alert(data);
+                          if(data == 'passed'){
+                            location.href = 'login';
+                          }
+                          else{
+                            const notificationbody = document.querySelector("#notificationbody")
+                            const notification = document.querySelector("#notification")
+                            notificationbody.style.display = 'block'
+                            notification.innerHTML = data
+                        }
+                      });
+                  });
+                });
+                </script>
+                <div class="form-group">
+					<input type="text" class="form-control" id="storename" aria-describedby="storenameHelp" placeholder="store name" required="">
+                    <small class="text-center">https://<small id="storeurl"></small>.venormall.com</small>
+                    <!--<small class="d-block mt-4 text-center"><a class="text-black" href="#">If you require a custom domain, you will can still get it after signing up.</a></small>-->
+                    <script>
+                        const text = document.querySelector("#storename")
+                        const label = document.querySelector("#storeurl")
+                        text.addEventListener('keyup', function(){
+                            label.innerHTML = text.value
+                        })
+                    </script>
+				</div>
+                <div class="form-group">
+					<textarea class="form-control" aria-describedby="nameHelp" name="" id="storeabout" cols="20" rows="5" placeholder="store about" required></textarea>
+                    <small style="font-size: 10pt;"><small class="text-center" id="storeabout2">0</small><small>/300</small></small>
+                    <script>
+                        const about = document.querySelector("#storeabout")
+                        const about2 = document.querySelector("#storeabout2")
+                        const count = 300
+                        about.addEventListener('keyup', function(){
+                            about2.innerHTML = about.value.length
+                            if(about.value.length >= count){
+                                about2.style.color = 'red'
+                                about.value = about.value.slice(0, count)
+                                //about.disabled = true
+                            }
+                            else{
+                                about2.style.color = 'black'
+                            }
+                        })
+                    </script>
+				</div>
+                <div class="form-group">
+                    <textarea class="form-control" aria-describedby="nameHelp" name="" id="storedescription" cols="20" rows="5" placeholder="store description" required></textarea>
+				</div>
+                <small class="d-block mt-4 text-center"><a class="text-black" href="#">Other store informations will be updated after signing up</a></small>
+				<button type="submit" id="loadContentButton" class="btn btn-success btn-block shadow-sm" style="background-color: #0D0E52; border: 1px solid #0D0E52;">register</button>
+			</div>
+            <!--was form-->
+		</div>
+	</div>
+</div>
+<!-- End Main -->
+    
+    
+<!------------------------------------------
+DEMO MODAL & DONATE BUTTON ONLY - DON'T COPY
+------------------------------------------->
+<div style="position:fixed; bottom:20px;left:20px;">
+	<a href="https://www.wowthemes.net/donate/" target="_blank"></a>
+</div>
+<!--------------------------------------
+END DEMO MODAL & DONATE BUTTON
+--------------------------------------->
+    
+    
+   
+<!--------------------------------------
+JAVASCRIPTS
+--------------------------------------->    
+<script src="./assets/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
+<script src="./assets/js/functions.js" type="text/javascript"></script>
+    
+<!-- Animation -->
+<script src="./assets/js/vendor/aos.js" type="text/javascript"></script>
+<noscript>
+    <style>
+        *[data-aos] {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+</noscript>
+<script>
+    AOS.init({
+        duration: 700
+    });
+</script>
+ 
+<!-- Disable animation on less than 1200px, change value if you like -->
+<script>
+AOS.init({
+  disable: function () {
+    var maxWidth = 1200;
+    return window.innerWidth < maxWidth;
+  }
+});
+</script>
+
+</body>

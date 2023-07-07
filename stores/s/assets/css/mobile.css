@@ -1,0 +1,24 @@
+@media (max-width: 600px){
+    main{
+        width: 100%;
+        flex-direction: column;
+    }
+    main .item-image, main .item-details{
+        width: 125%;
+    }
+    main .item-image{
+        height: 300px;
+    }
+    main .item-image{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    main .item-details{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+}

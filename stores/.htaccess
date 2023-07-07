@@ -1,0 +1,12 @@
+RewriteEngine on
+# This is for home
+RewriteRule ^$ index.php [L]
+RewriteRule ^home$ index.php [L]
+RewriteRule ^placeorder$ includes/placeorder.php [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+ErrorDocument 404 "<div style='margin:0;width:100%;height:100vh;background-color: #000;color:#fff;text-align:center;font-size:20pt;'><span>NOT FOUND</div>"
+RewriteCond %{REQUEST_FILENAME}\.php !-f
+RewriteRule ^item-([0-9A-Za-z_()]+) single?code=$1&store=philip [NC,L]
+RewriteRule ^category-([A-Za-z_0-9()]+) category.php?category=$1 [NC,L]

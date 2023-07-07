@@ -9,14 +9,14 @@ include('header.php');
         <div class="container">
             <div class="sub-container">
                 <div class="header">
-                    <h1>Venor Mall</h1>
-                    <p>manage your ecommerce store with ease</p>
+                    <h1>Venormall</h1>
+                    <p>manage your e-commerce store with ease</p>
                 </div>
                 <div class="content-container">
                     <div class="content">
                         <div class="content-sub">
                             <div class="desc-cont">
-                                <div class="desc-img-container">
+                                <div class="desc-img-container" id="img-cont1">
                                     <img src="images/opt.svg">
                                 </div>
 
@@ -29,7 +29,7 @@ include('header.php');
                                 </div>
                             </div>
                             <div class="button-cont">
-                                <button class="btn btn-primary body-btn"><a href='add.php'>Add Products</a></button>
+                            <a href='addproduct'><button class="btn btn-primary btn-body">Add Products</button></a>
                             </div>
                         </div>
                         <div class="content-sub">
@@ -39,15 +39,15 @@ include('header.php');
                                 </div>
 
                                 <div class="desc">
-                                    <h3>Report</h3>
+                                    <h3>Store</h3>
                                     <div class="sub-desc">
                                         <p>Set, track and view your store's target</p>
-                                        <p>Our easy-to-follow site will walk you through ever step from domain mapping to publishing</p>
+                                        <p>Edit your added products with relative ease</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="button-cont">
-                                <button class="btn btn-primary body-btn"><a href='#'>view Report</a></button>
+                            <a href='store'><button class="btn btn-primary btn-body">My store</button></a>
                             </div>
                         </div>
                         <div class="content-sub">
@@ -65,7 +65,7 @@ include('header.php');
                                 </div>
                             </div>
                             <div class="button-cont">
-                                <button class="btn btn-primary body-btn"><a href='#'>View orders</a></button>
+                            <a href='orders'><button class="btn btn-primary btn-body">View orders</button></a><!--body-btn-->
                             </div>
                         </div>
                     </div>

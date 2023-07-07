@@ -1,0 +1,13 @@
+RewriteEngine on
+# This is for home
+RewriteRule ^$ index.php [L]
+#RewriteRule ^dashboard$ index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+ErrorDocument 404 '<h1 style="text-align:center;margin-top:20rem;">NOT FOUND</h1>'
+# For requests passed in the url
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php !-f
+#RewriteRule ^product/([a-z]+) check.php?food=$1 [NC,L]
+RewriteRule ^product-([0-9a-zA-Z_()]+)-([0-9a-zA-Z_()]+) index?productid=$1&userid=$2 [NC,L]

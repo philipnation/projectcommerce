@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #notification {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: fixed;
+        top: 90%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        transition: transform 0.3s ease-in-out, right 0.3s ease-in-out;
+        z-index: 1;
+      }
+      
+      #notification.hidden {
+        transform: translateY(-50%) translateX(350px);
+        /*Change it to translateX(300px) and it will be visible*/
+        right: 0;
+      }
+      
+      #notification h2 {
+        margin: 0 0 10px;
+        font-size: 1.2rem;
+        color: #FED700;
+      }
+      
+      #notification p {
+        margin: 0;
+        font-size: 1rem;
+        color: #666;
+      }
+      
+      #closeBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.2rem;
+        color: #666;
+        cursor: pointer;
+      }
+      
+      #closeBtn:hover {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="notification" class="hidden">
+      <!--<h2 id="productmessage"></h2>-->
+      <!--<p>product has been successfully added</p>-->
+      <p id="productmessage"></p>
+      <span id="closeBtn">&times;</span>
+    </div>
+    
+    <!--<button onclick="showNotification()">Show Notification</button>-->
+
+    <script>
+      function showNotification() {
+        const notification = document.getElementById("notification");
+        notification.classList.remove("hidden");
+      }
+
+      const closeBtn = document.getElementById("closeBtn");
+      closeBtn.addEventListener("click", function() {
+        const notification = document.getElementById("notification");
+        notification.classList.add("hidden");
+      });
+      function closenotification(){
+        const notification = document.getElementById("notification");
+        notification.classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
