@@ -24,6 +24,9 @@ else{
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="<?php echo $store_row['keyword']; ?>">
+  <meta name="description" content="<?php echo $store_row['store_description']; ?>">
+  <meta name="author" content="<?php echo $store_row['store_name']; ?>">
   <title><?php echo $store_row['store_name'] ?> | dashboard</title>
   <link rel="icon" href="images/logo_white.png">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
@@ -56,7 +59,7 @@ else{
       <div class="notice">
         <?php
           $registrationDate = $user_row['reg_date'];
-          $trialPeriodDays = 14;
+          $trialPeriodDays = 13; //Change 14c and it will be 15 days free trial
           $registrationTimestamp = strtotime($registrationDate);
           $trialEndDate = strtotime("+$trialPeriodDays days", $registrationTimestamp);
           $currentDate = time();
@@ -74,7 +77,7 @@ else{
             }
           }
           ?>
-        <a href="#" class="upgrade-btn"><button class="btn btn-primary body-btn">Upgrade</button></a>
+        <!--<a href="#" class="upgrade-btn"><button class="btn btn-primary body-btn">Upgrade</button></a>-->
         <a href="https://<?php echo $store_row['store_name'] ?>.venormall.com" target="_blank" class="view-str-btn1"><button class="btn btn-primary body-btn">view store</button></a>
         </p>
       </div>
@@ -93,7 +96,7 @@ else{
                 <li><a href='store'>My store</a></li>
                 <li><a href='settings'>My account</a></li>
                 <li><a href='payment'>Subscriptions</a></li>
-                <li><a href='#'>Signout</a></li>
+                <li><a href='./includes/logout'>Signout</a></li>
               </ul>
             </div>
           </div>
@@ -155,6 +158,12 @@ else{
       <a href="store">
         <i class="fa fa-gear"></i>
         Site settings
+      </a>
+    </div>
+    <div class="links">
+      <a href="invite">
+        <i class="fa fa-users"></i>
+        Referral - Vcredit
       </a>
     </div>
   </div>

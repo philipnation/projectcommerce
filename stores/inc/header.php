@@ -11,8 +11,9 @@ if(mysqli_num_rows($result)>0){
     $sqlresult = mysqli_query($conn, "SELECT * FROM users WHERE userid = '$storerow[userid]'");
     $sqlresultrow = mysqli_fetch_assoc($sqlresult);
     //Check if the account is active.
-    if($sqlresultrow['status'] == 'unpaid' && $sqlresultrow['active'] == '0'){ 
-        header("Location: maintain.html");
+    if($sqlresultrow['action'] == 'inactive'){ 
+        include("./maintain.html");
+        exit();
     }
     else{
         session_start();
@@ -51,8 +52,8 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?php echo $storename; ?></title>
-    <meta name="keywords" content="<?php echo $storename; ?>">
-    <meta name="description" content="<?php echo $storename; ?>">
+    <meta name="keywords" content="<?php echo $storerow['keyword']; ?>">
+    <meta name="description" content="<?php echo $storerow['store_description']; ?>">
     <meta name="author" content="<?php echo $storename; ?>">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/<?php echo $storerow['logo']?>">

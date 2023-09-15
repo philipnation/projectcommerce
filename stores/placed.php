@@ -1,5 +1,8 @@
 <?php
 include("inc/header.php");
+if(!isset($_SESSION['customer_name'])){
+  header("Location: home");
+}
 ?>
 <link rel="stylesheet" href="../user/font/css/all.css">
 <script src="assets/js/htp.js"></script>
@@ -112,6 +115,10 @@ include("inc/header.php");
         //alert(1)
         var element = document.querySelector('#receipt');
         html2pdf().from(element).save('receipt');//chart will be the name of the file.
+        setTimeout(function(){
+          //console.log("successful")
+          location.href = 'home'
+        }, 8000)
       }
     </script>
 </body>

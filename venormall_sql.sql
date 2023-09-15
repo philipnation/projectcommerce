@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2023 at 11:42 AM
+-- Generation Time: Aug 13, 2023 at 10:45 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -112,7 +112,9 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `userid`, `ordername`, `firstname`, `lastname`, `country`, `street_address`, `city`, `state`, `phone_number`, `email`, `payment_method`, `delivery_note`, `product_name`, `product_price`, `product_quantity`, `product_quantity_total`, `order_total`, `product_image`, `date`, `order_date`, `selling_price`, `delivery_fee`, `action`) VALUES
-(29, 'e9vrQRqugz', 'order7628049', 'PHILIP', 'IKECHUKWU', 'Nigeria', 'No. 29 St. Stephen\'s drive F.H.E', 'Onitsha', 'Anambra', '09157078097', 'ikechukwuphilip45@gmail.com', 'Payment on delivery', 'Fast delivery please', 'tshirt,blue shorts,big brother', '3000,2400,900', '32,15,20', '96000,36000,18000', '150000', 'short.jpg,46750.jpg,bigbrother.jpeg', '7th July, 2023', '2023-07-07', '118000', '200', 'pending');
+(29, 'e9vrQRqugz', 'order7628049', 'PHILIP', 'IKECHUKWU', 'Nigeria', 'No. 29 St. Stephen\'s drive F.H.E', 'Onitsha', 'Anambra', '09157078097', 'ikechukwuphilip45@gmail.com', 'Payment on delivery', 'Fast delivery please', 'tshirt,blue shorts,big brother', '3000,2400,900', '32,15,20', '96000,36000,18000', '150000', 'short.jpg,46750.jpg,bigbrother.jpeg', '7th July, 2023', '2023-07-07', '118000', '200', 'delivered'),
+(30, 'e9vrQRqugz', 'order7265596', 'Philip', 'Ikechukwu', 'Nigeria', 'No 29 St Stephen\'s drive F.H.E', 'Onitsha', 'Anambra', '+2348120188577', 'ikechukwuphilip45@gmail.com', 'Payment on delivery', '', 'X box full set,big brother,tshirt,blue shorts', '45000,900,3000,2400', '56,13,44,223', '2520000,11700,132000,535200', '3198900', '26349.jpg,bigbrother.jpeg,short.jpg,46750.jpg', '7th July, 2023', '2023-07-07', '1961200', '200', 'declined'),
+(32, 'e9vrQRqugz', 'order8138129', 'PHILIP', 'IKECHUKWU', 'Nigeria', 'No. 29 St. Stephen\'s drive F.H.E', 'Onitsha', 'Anambra', '09157078097', 'ikechukwuphilip45@gmail.com', 'Payment on delivery', '', 'blue shorts', '2400', '6', '14400', '14400', '46750.jpg', '30th July, 2023', '2023-07-30', '12000', '200', 'delivered');
 
 -- --------------------------------------------------------
 
@@ -131,6 +133,14 @@ CREATE TABLE `order_report` (
   `date_delivered` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `order_report`
+--
+
+INSERT INTO `order_report` (`id`, `userid`, `orderid`, `price_sold`, `price_gained`, `delivery_fee`, `date_ordered`, `date_delivered`) VALUES
+(1, 'e9vrQRqugz', 'order7628049', '150000', '118000', '200', '7th July, 2023', '7th July, 2023'),
+(3, 'e9vrQRqugz', 'order8138129', '14400', '12000', '200', '30th July, 2023', '30th July, 2023');
+
 -- --------------------------------------------------------
 
 --
@@ -142,8 +152,20 @@ CREATE TABLE `payment` (
   `userid` varchar(100) NOT NULL,
   `payment_id` varchar(100) NOT NULL,
   `paid_date` varchar(100) NOT NULL,
-  `due_date` varchar(100) NOT NULL
+  `due_date` varchar(100) NOT NULL,
+  `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `payment`
+--
+
+INSERT INTO `payment` (`id`, `userid`, `payment_id`, `paid_date`, `due_date`, `status`) VALUES
+(8, 'e9vrQRqugz', '64289', '13th August, 2023', '12th September, 2023', 'paid'),
+(9, 'TOtzXhpnBr', '399170', '13th August, 2023', '12th September, 2023', 'paid'),
+(10, 'TOtzXhpnBr', '666485', '13th August, 2023', '12th September, 2023', 'paid'),
+(11, 'TOtzXhpnBr', '268770', '13th August, 2023', '12th September, 2023', 'paid'),
+(12, 'DF2tAsbyXu', '996285', '13th August, 2023', '12th September, 2023', 'paid');
 
 -- --------------------------------------------------------
 
@@ -170,8 +192,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `userid`, `category`, `product_code`, `product_name`, `product_price`, `product_image`, `amount_in_stock`, `product_description`, `cost_price`, `selling_price`) VALUES
-(1, 'e9vrQRqugz', 'clothes', '1234', 'tshirt', '3000', 'short.jpg', '30', 'A very nice product. Always suit any weather condition.A very nice product. Always suit any weather.A very nice product. Always suit any weather condition.A very nice product. Always suit any weather condition.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice product.A very nice productA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather conditionA very nice product. Always suit any weather condition', '2500', '3000'),
-(2, 'e9vrQRqugz', 'prov', '2468', 'big brother', '900', 'bigbrother.jpeg', '10', 'Big brother is a very sweet bread that tastes so so nice that you can eat it every morning and never to get tired.', '400', '900'),
+(2, 'e9vrQRqugz', 'bags', '2468', 'big brothe', '90', 'bigbrother.jpeg', '1', 'Big brother is a very sweet bread that tastes so so nice that you can eat it every morning and never to get', '40', '90'),
 (3, 'e9vrQRqugz', 'clothes', 'BxKQwyZEmD', 'blue shorts', '2400', '46750.jpg', '20', 'A very easy and simple shorts. You can wear it for any occasion and for anything.', '2000', '2400'),
 (4, 'e9vrQRqugz', 'Accessories', 'KVQll4G6qG', 'X box full set', '45000', '26349.jpg', '20', 'Full Xbox set. Ready to be played.', '25000', '45000');
 
@@ -193,7 +214,9 @@ CREATE TABLE `referral` (
 --
 
 INSERT INTO `referral` (`id`, `userid`, `ref_code`, `action`) VALUES
-(5, '45zHM77v5L', 'fOB0D0H2NB', 'unpaid');
+(5, '45zHM77v5L', 'fOB0D0H2NB', 'unpaid'),
+(6, 'TOtzXhpnBr', 'GJdsg53G42', 'paid'),
+(7, 'DF2tAsbyXu', 'GJdsg53G42', 'paid');
 
 -- --------------------------------------------------------
 
@@ -247,7 +270,9 @@ CREATE TABLE `store_setting` (
 
 INSERT INTO `store_setting` (`id`, `userid`, `store_name`, `store_description`, `pixel_code`, `keyword`, `delivery_note`, `delivery_fee`, `services`, `about`, `tel`, `logo`, `discount`, `store_color`) VALUES
 (14, 'e9vrQRqugz', 'philip', 'a very nice store to sell clothes', '21', 'e-commerce, sales, selling', NULL, '200', NULL, 'clothing store', '08120188577', 'logo43221.png', NULL, '#4e759c'),
-(15, '7npC1ZBhHa', 'lishoes', 'Lishoes is a shoe company that deals on shoes of high quality.', '', '', NULL, 'Free', NULL, 'Lishoes provides the best type of shoes to use', '08120188577', 'logo79243.jpg', NULL, '#a65b5b');
+(15, '7npC1ZBhHa', 'lishoes', 'Lishoes is a shoe company that deals on shoes of high quality.', '', '', NULL, 'Free', NULL, 'Lishoes provides the best type of shoes to use', '08120188577', 'logo79243.jpg', NULL, '#a65b5b'),
+(16, 'TOtzXhpnBr', 'testing', 'Good', NULL, NULL, NULL, NULL, NULL, 'Good', NULL, NULL, NULL, ''),
+(17, 'DF2tAsbyXu', 'ali', 'Ali selling shoes', NULL, NULL, NULL, NULL, NULL, 'We sell ali shoes', NULL, NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -278,8 +303,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `userid`, `name`, `email`, `password`, `phone_number`, `business_name`, `reg_date`, `venorcredit`, `status`, `action`, `ref_code`, `template`, `plan`, `active`) VALUES
-(35, 'e9vrQRqugz', 'philip ikechukwu', 'ikechukwuphilip45@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '08120188577', 'philipshoes', '22nd June, 2023', '0', 'unpaid', 'active', 'GJdsg53G42', '1', 'starter', '1'),
-(36, '7npC1ZBhHa', 'John ali', 'philipnation54@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '09157078097', 'lishoe', '4th July, 2023', '0', 'unpaid', 'active', 'RVsOMTS1uH', '1', 'starter', '1');
+(35, 'e9vrQRqugz', 'philip ikechukwu', 'ikechukwuphilip45@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '08120188577', 'philipshoes', '22nd June, 2023', '17000', 'paid', 'active', 'GJdsg53G42', '1', 'starter', '1'),
+(36, '7npC1ZBhHa', 'John ali', 'philipnation54@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '09157078097', 'lishoe', '4th July, 2023', '0', 'unpaid', 'active', 'RVsOMTS1uH', '1', 'starter', '1'),
+(37, 'TOtzXhpnBr', 'PHILIP john IKECHUKWU', 'ikechukwuphilip@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '0915707809', 'philipnationbusiness', '26th July, 2023', '0', 'paid', 'active', 'zcrgw5u0lW', '1', 'professional', '1'),
+(38, 'DF2tAsbyXu', 'Ali', 'ali@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '07057548249', 'Ali clothes', '30th July, 2023', '0', 'paid', 'active', 'qRg55HRVCA', '1', 'advanced', '1');
 
 --
 -- Indexes for dumped tables
@@ -365,19 +392,19 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `order_report`
 --
 ALTER TABLE `order_report`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -389,7 +416,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `referral`
 --
 ALTER TABLE `referral`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `social_media`
@@ -401,13 +428,13 @@ ALTER TABLE `social_media`
 -- AUTO_INCREMENT for table `store_setting`
 --
 ALTER TABLE `store_setting`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

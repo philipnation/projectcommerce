@@ -1,5 +1,10 @@
 <?php
 include 'header.php';
+if(isset($_GET['product_del_id'])){
+    $del_id = $_GET['product_del_id'];
+    mysqli_query($conn, "DELETE FROM products WHERE id='$del_id' AND userid='$userid'");
+    header("Location: products");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +70,8 @@ include 'header.php';
                                     <!--add to cart-->
                                     <div class='icons'>
                                         <a href='#' class='atc' title='copy single link'><i class='fa fa-link copy'><span style='display:none;'>localhost/venormall/stores/s/product-$product_row[product_code]-$userid</span></i></a>
-                                        <a href='#' class='atc' title='edit $product_row[product_name]'><i class='fa fa-bars'></i></a>
+                                        <a href='editproduct-$product_row[id]' class='atc' title='edit $product_row[product_name]'><i class='fa fa-pencil'></i></a>
+                                        <a href='deleteproduct-$product_row[id]' class='atc' title='delete $product_row[product_name]'><i class='fa fa-trash'></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +79,7 @@ include 'header.php';
                             }
                         }
                         else{
-                            echo "no produt added yet";
+                            echo "<p text-align:center;>no produt added yet</p>";
                         }
                         include("../stores/notify.html");
                     ?>

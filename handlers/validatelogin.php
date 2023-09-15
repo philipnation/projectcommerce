@@ -21,7 +21,7 @@ function validatelogin($email, $password){
         }
     }
     else{
-        echo "incoreect details";
+        echo "incorrect details";
     }
 }
 validatelogin($_POST['email'], $_POST['password']);

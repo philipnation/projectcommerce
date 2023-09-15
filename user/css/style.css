@@ -1224,7 +1224,8 @@ a {
   font-weight: 700;
   color: rgb(12, 123, 241);
   opacity: 0.8;
-  margin: 0;
+  margin: 10px;
+  margin-bottom: 0px;
 }
 @media(max-width:800px){
   .report-headers-info .total-amount-day{

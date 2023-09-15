@@ -91,7 +91,7 @@ if(isset($_POST['add_product'])){
                         <div class="form-groups">
                             <label for="">category <span>*</span></label>
                             <div class="input-box">
-                                <select name="category" id="" style="width: 100%;height:35px;color:grey;">
+                                <select name="category" id="" style="width: 100%;height:35px;color:grey;font-size:8pt;">
                                     <option value="none">--select category--</option>
                                     <?php
                                     $category_sql = "SELECT * FROM categories WHERE userid='$userid'";
@@ -117,7 +117,7 @@ if(isset($_POST['add_product'])){
                         <div class="form-groups">
                             <label for="">description</label>
                             <div class="input-box">
-                                <textarea name="product_description" id="" cols="30" rows="3" style="width:100%;resize:none;"></textarea>
+                                <textarea name="product_description" id="" cols="30" rows="3" style="width:100%;resize:none;font-size:8pt;"></textarea>
                             </div>
                         </div>
                         <div class="form-groups">

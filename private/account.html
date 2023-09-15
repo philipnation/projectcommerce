@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/font/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png">
+    <title>dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p class="logo-name"><span>E-</span>GOLD</p>
+        <header>
+            <p>wednesday, 23rd march</p>
+            <nav>
+                <div class="brand-name">
+                    Hi, Philip
+                </div>
+                <div class="brand-logo">
+                    <img src="assets/images/screenshot/e-goldcart.png" alt="Profile">
+                </div>
+            </nav>
+        </header>
+        <div class="dashboard-body">
+            <div class="earn-history">
+                <nav>
+                    <div>Total balance</div>
+                    <div><span id="balance">$5,930.33 </span><i class="fa fa-eye" id="eye"></i></div>
+                    <p id="amount" style="display: none;">5,930.33</p>
+                </nav>
+
+                <div class="earning">
+                    <nav>
+                        <div>
+                            <p><a href="#">FUND ACCOUNT</a></p>
+                        </div>
+                        <div class="brand-logo">
+                            <a href="#"><i class="fa fa-wallet"></i></a>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="earning">
+                    <nav>
+                        <div>
+                            <p>Total referred</p>
+                            <p>0</p>
+                        </div>
+                        <div class="brand-logo">
+                            <i class="fa fa-users"></i>
+                        </div>
+                    </nav>
+                </div>
+
+                <p>Account details <a href="#">edit</a></p>
+                <div class="history">
+                        <div>
+                            <div class="history-details">
+                                <p>Email</p>
+                                <p>ikechukwuphilip@gmail.com</p>
+                            </div>
+                            <div class="history-details">
+                                <p>Phone number</p>
+                                <p>+2348120188577</p>
+                            </div>
+                            <div class="history-details">
+                                <p>Password</p>
+                                <p>*****</p>
+                            </div>
+                            <div class="history-details">
+                                <p>Delivery Location</p>
+                                <p>No 1 Close gate, Onitsha, Anambra State</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <footer>
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <p>home</p>
+                </a>
+                <a href="#">
+                    <i class="fa fa-repeat"></i>
+                    <p>earnings</p>
+                </a>
+                <a href="history.html">
+                    <i class="fa fa-bell"></i>
+                    <p>notifications</p>
+                </a>
+                <a class="active" href="account.html">
+                    <i class="fa fa-user"></i>
+                    <p>account</p>
+                </a>
+            </footer>
+        </div>
+    </div>
+</body>
+<script>
+    const eye = document.querySelector("#eye")
+    const balance = document.querySelector("#balance")
+    const amount = document.querySelector("#amount").innerText
+    eye.addEventListener("click", function(){
+        //alert(1)
+        if(balance.innerText == "****"){
+            balance.innerText = amount
+        }
+        else{
+            balance.innerText = "****"
+        }
+    })
+</script>
+</html>

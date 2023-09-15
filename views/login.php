@@ -7,7 +7,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <title>venormall</title>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
-    
+<meta name="keywords" content="E-commerce, login, stores, online stores">
+<meta name="description" content="Access your Venormall dashboard to efficiently manage your store with ease and speed.">
+<meta name="author" content="Venormall">
+<link rel="shortcut icon" href="./assets/img/favicon.ico">
+
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,600,800" rel="stylesheet">
     
@@ -23,7 +27,6 @@
 </head>
     
 <body> 
-    
     
 <!--------------------------------------
 NAVBAR
@@ -63,33 +66,33 @@ NAVBAR
 		</div>
 	</div>
 	<script src="assets/js/ajax.js"></script>
-                <script>
-                $(document).ready(function() {
-                  $('#signin').click(function() {
-                      var email = $("#email").val();
-                      var password = $("#password").val();
-                      $.post("handlers/validatelogin.php", {
-                          email:email,
-						  password:password
-                      }, function(data, status){
-                          $("#login_reply").html(data);
-                          //alert(data);
-                          if(data == 'verify'){
-                            location.href = 'verify';
-                          }
-						  else if(data == 'dashboard'){
-							location.href = 'user'
-						  }
-                          else{
-                            const notificationbody = document.querySelector("#notificationbody")
-                            const notification = document.querySelector("#notification")
-                            notificationbody.style.display = 'block'
-                            notification.innerHTML = data
-                        }
-                      });
-                  });
-                });
-                </script>
+	<script>
+		$(document).ready(function() {
+			$('#signin').click(function() {
+				var email = $("#email").val();
+				var password = $("#password").val();
+				$.post("handlers/validatelogin.php", {
+					email:email,
+					password:password
+				}, function(data, status){
+					$("#login_reply").html(data);
+					//alert(data);
+					if(data == 'verify'){
+						location.href = 'verify';
+					}
+					else if(data == 'dashboard'){
+						location.href = 'user'
+					}
+					else{
+						const notificationbody = document.querySelector("#notificationbody")
+						const notification = document.querySelector("#notification")
+						notificationbody.style.display = 'block'
+						notification.innerHTML = data
+					}
+				});
+			});
+		});
+	</script>
 	<div class="col-md-6 p-0 bg-white h-md-100 loginarea">
 		<div class="d-md-flex align-items-center h-md-100 justify-content-center">
 			<div class="border rounded p-5"><!--was form-->

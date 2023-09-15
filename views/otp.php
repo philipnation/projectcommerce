@@ -51,10 +51,24 @@ if(!isset($_SESSION['otp'])){
       margin-top: 2rem;
     }
     .form-in{
-      border-top: 1px solid transparent;
+      /*border-top: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;*/
+      box-shadow: none !important;
     }
     .form-in:focus-within{
       outline: none !important;
+      border: 1px solid #000;
+    }
+    /* Remove the default up and down arrows for number input */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type="number"] {
+      -moz-appearance: textfield; /* Firefox */
     }
   </style>
 </head>
@@ -64,11 +78,11 @@ if(!isset($_SESSION['otp'])){
     <h6>Please check your email inbox for the OTP that has been sent to you.</h6>
     <div class="otp-input">
       <input type="number" maxlength="1" class="form-control form-in" id="otp1" autofocus>
-      <input type="number" maxlength="1" class="form-control" id="otp2">
-      <input type="number" maxlength="1" class="form-control" id="otp3">
-      <input type="number" maxlength="1" class="form-control" id="otp4">
-      <input type="number" maxlength="1" class="form-control" id="otp5">
-      <input type="number" maxlength="1" class="form-control" id="otp6">
+      <input type="number" maxlength="1" class="form-control form-in" id="otp2">
+      <input type="number" maxlength="1" class="form-control form-in" id="otp3">
+      <input type="number" maxlength="1" class="form-control form-in" id="otp4">
+      <input type="number" maxlength="1" class="form-control form-in" id="otp5">
+      <input type="number" maxlength="1" class="form-control form-in" id="otp6">
     </div>
     <button class="btn btn-primary submit-btn" style="margin: auto;">Submit</button>
     <p class="success-message">Success! OTP Verified.</p>

@@ -8,6 +8,12 @@ include '../stores/notify.html';
 <body>
     <div class="update-body">
     <div class="form-container">
+    <div class="form">
+        <div class="prf-img-up" style="display:flex;justify-content:space-around;align-items:center;">
+                <small style="text-align:center;color: rgb(0,123,255);font-size:11pt;" id="ref_code">https://<?php echo $store_row['store_name'] ?>.venormall.com</small>
+                <button class="update-button btn-body" id="ref_copy"><i class="fa fa-copy"></i></button>
+        </div>
+    </div>
         <!--form-->
         <div class="form">
         <div class="prf-img-up" style="display:flex;justify-content:space-between;">
@@ -160,3 +166,19 @@ if(isset($_POST['add_image'])){
     }
 }
 ?>
+<script>
+    var btn_copy = document.querySelector("#ref_copy").addEventListener("click", function() { 
+        //alert(1)
+        var copyText = document.createElement("textarea");
+        var text =document.getElementById("ref_code").innerText
+        copyText.value = text;
+        document.body.appendChild(copyText);
+        copyText.select();
+        document.execCommand("copy");
+        document.body.removeChild(copyText);
+        //alert("Copied: " + text);
+        document.getElementById("productmessage").innerText = "URL copied"
+        showNotification()
+        setTimeout(closenotification,1000)
+    });
+</script>

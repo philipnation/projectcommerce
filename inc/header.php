@@ -58,9 +58,9 @@ NAVBAR
 			<li class="nav-item">
 				<a class="nav-link" href="about" style="color: whitesmoke;">About</a>
 			</li>
-			<li class="nav-item">
+			<!--<li class="nav-item">
 				<a class="nav-link" href="about" style="color: whitesmoke;">Contact</a>
-			</li>
+			</li>-->
 			<li class="nav-item">
 				<a class="nav-link" href="login" style="color: whitesmoke;">Login</a>
 			</li>

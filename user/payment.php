@@ -48,25 +48,71 @@ include("header.php");
                             <div class="d-flex flex-column px-md-5 px-4 mb-4">
                                 <span>Buiness name</span>
                                 <div class="inputWithIcon">
-                                    <input class="form-control" type="text" id="first-name" style="background-color:transparent;" value="philipshoes" readonly>
+                                    <input class="form-control" type="text" id="first-name" style="background-color:transparent;" value="<?php echo $user_row['business_name'] ?>" readonly>
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-md-5 px-4 mb-4">
                                 <span>Email</span>
                                 <div class="inputWithIcon">
-                                    <input class="form-control" type="text" id="email-address" style="background-color:transparent;"  value="john@gmail.com" readonly>
+                                    <input class="form-control" type="text" id="email-address" style="background-color:transparent;"  value="<?php echo $user_row['email'] ?>" readonly>
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-md-5 px-4 mb-4">
                                 <span>plan</span>
                                 <div class="inputWithIcon">
-                                    <input class="form-control" type="text" style="background-color:transparent;"  value="starter" readonly>
-                                    <input class="form-control" type="text" id="amount" style="background-color:transparent;"  value="5000" readonly hidden>
+                                    <input class="form-control" type="text" style="background-color:transparent;"  value="<?php echo $user_row['plan'] ?>" readonly>
+                                    <input class="form-control" type="text" id="amount" style="background-color:transparent;"  value="<?php
+                                        if($user_row['plan'] == "starter"){
+                                            echo 5000;
+                                        }
+                                        elseif($user_row['plan'] == "professional"){
+                                            echo 15000;
+                                        }
+                                        elseif($user_row['plan'] == "advanced"){
+                                            echo 35000;
+                                        }
+                                        else{
+                                            echo "Error";
+                                        }
+                                        ?>" readonly hidden
+                                    >
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 px-md-5 px-4 mt-3">
-                            <div class="btn btn-primary w-100" onclick="SquadPay()" style="background-color:rgb(13, 14, 82);">Pay 5,000</div>
+                            <div class="btn btn-primary w-100" onclick="SquadPay()" style="background-color:rgb(13, 14, 82);">Pay NGN <?php
+                                if($user_row['plan'] == "starter"){
+                                    echo '5,000';
+                                }
+                                elseif($user_row['plan'] == "professional"){
+                                    echo '15,000';
+                                }
+                                elseif($user_row['plan'] == "advanced"){
+                                    echo '35,000';
+                                }
+                                else{
+                                    echo "Error";
+                                }
+                                ?>
+                            </div>
+                        </div>
+
+                        <div class="col-12 px-md-5 px-4 mt-3">
+                            <p style="text-align: center;">OR PAY WITH VENOR CREDIT</p>
+                            <div class="btn btn-primary w-100" onclick="SquadPay()" style="background-color:rgb(13, 14, 82);">Pay VC <?php
+                            if($user_row['plan'] == "starter"){
+                                echo 5;
+                            }
+                            elseif($user_row['plan'] == "professional"){
+                                echo 15;
+                            }
+                            elseif($user_row['plan'] == "advanced"){
+                                echo 35;
+                            }
+                            else{
+                                echo "Error";
+                            }
+                            ?></div>
                         </div>
                     </div>
                 </form>

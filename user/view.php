@@ -2,10 +2,21 @@
 include("header.php");
 if(isset($_GET['deliver'])){
     $oid = $_GET['deliver'];
+    $date = date('jS F, Y');
     $deliver_sql = "UPDATE orders SET action='delivered' WHERE ordername='$oid'";
     $deliver_result = mysqli_query($conn, $deliver_sql);
     if($deliver_result){
-        header("Location: ./orders");
+        $order_get_result = mysqli_query($conn, "SELECT * FROM orders WHERE ordername='$oid' AND userid='$userid'");
+        $order_get_row = mysqli_fetch_assoc($order_get_result);
+        $order_insert_result = mysqli_query($conn,"INSERT INTO order_report(userid,orderid,price_sold,price_gained,delivery_fee,date_ordered,date_delivered)
+        VALUES('$userid','$oid','$order_get_row[order_total]','$order_get_row[selling_price]','$order_get_row[delivery_fee]','$order_get_row[date]','$date')");
+        if($order_insert_result){
+            header("Location: ./orders");
+            //var_dump($order_get_row);
+        }
+        else{
+            echo "error".mysqli_error($conn);
+        }
     }
     else{
         echo "error";
@@ -23,7 +34,7 @@ if(isset($_GET['decline'])){
     }
 }
 if(!isset($_GET['ordername'])){
-    header("Location: ./orders");
+    //header("Location: ./orders");
 }
 else{
     $ordername = $_GET['ordername'];
@@ -37,7 +48,7 @@ else{
         $product_image = explode (",", $single_order_row['product_image']);
         $product_quantity_total = explode (",", $single_order_row['product_quantity_total']);
         $status = $single_order_row['action'];
-        $product_id = $single_order_row['product_code'];
+        //$product_id = $single_order_row['product_code'];
     }
     else{
         header("Location: ../");
